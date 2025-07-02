@@ -14,16 +14,15 @@ export default function LandingPage() {
       <section className="mt-20 pb-12 space-y-10 md:space-y-15 px-5">
         <div className="container mx-auto px-4 md:px-6 text-center space-y-6">
           <Badge variant="outline" className="bg-green-100 text-green-700">
-            Split expenses. Simplify life.
+            Welcome to FineSplit
           </Badge>
 
           <h1 className="gradient-title mx-auto max-w-6xl text-4xl font-bold md:text-8xl">
-            The smartest way to split expenses with friends
+            The easiest way to split expenses with anyone
           </h1>
 
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            Track shared expenses, split bills effortlessly, and settle up
-            quickly. Never worry about who owes who again.
+            Track group spending, share bills, and settle up with clarity using FineSplit.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row justify-center">
@@ -54,7 +53,7 @@ export default function LandingPage() {
               src="/hero.png"
               width={1280}
               height={720}
-              alt="Banner"
+              alt="FineSplit preview"
               className="rounded-lg mx-auto"
               priority
             />
@@ -69,11 +68,10 @@ export default function LandingPage() {
             Features
           </Badge>
           <h2 className="gradient-title mt-2 text-3xl md:text-4xl">
-            Everything you need to split expenses
+            Tools to make splitting easier
           </h2>
           <p className="mx-auto mt-3 max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            Our platform provides all the tools you need to handle shared
-            expenses with ease.
+            FineSplit gives you everything needed to manage shared expenses smoothly.
           </p>
 
           <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -98,14 +96,13 @@ export default function LandingPage() {
       <section id="how-it-works" className="py-20">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <Badge variant="outline" className="bg-green-100 text-green-700">
-            How It Works
+            How It Works
           </Badge>
           <h2 className="gradient-title mt-2 text-3xl md:text-4xl">
-            Splitting expenses has never been easier
+            Getting started with FineSplit is easy
           </h2>
           <p className="mx-auto mt-3 max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            Follow these simple steps to start tracking and splitting expenses
-            with friends.
+            Just follow these steps to start tracking and splitting expenses.
           </p>
 
           <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-3">
@@ -129,7 +126,7 @@ export default function LandingPage() {
             Testimonials
           </Badge>
           <h2 className="gradient-title mt-2 text-3xl md:text-4xl">
-            What our users are saying
+            What people say about FineSplit
           </h2>
 
           <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -139,7 +136,6 @@ export default function LandingPage() {
                   <p className="text-gray-500">{quote}</p>
                   <div className="flex items-center space-x-3">
                     <Avatar>
-                      {/* Placeholder avatar */}
                       <AvatarImage src={image} alt={name} />
                       <AvatarFallback className="uppercase">
                         {name.charAt(0)}
@@ -161,11 +157,10 @@ export default function LandingPage() {
       <section className="py-20 gradient">
         <div className="container mx-auto px-4 md:px-6 text-center space-y-6">
           <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl text-white">
-            Ready to simplify expense sharing?
+            Try FineSplit today
           </h2>
           <p className="mx-auto max-w-[600px] text-green-100 md:text-xl/relaxed">
-            Join thousands of users who have made splitting expenses
-            stress‑free.
+            Make expense sharing effortless with the tools you deserve.
           </p>
           <Button asChild size="lg" className="bg-green-800 hover:opacity-90">
             <Link href="/dashboard">
@@ -180,6 +175,13 @@ export default function LandingPage() {
       <footer className="border-t bg-gray-50 py-12 text-center text-sm text-muted-foreground">
         © {new Date().getFullYear()} FineSplit. All rights reserved.
       </footer>
+      {/* ───── FineSplit Clean Footer Branding ───── */}
+      <section className="relative bg-gray-50 md:h-50 flex items-center justify-center -mt-10">
+        <h2 className="text-[4rem] md:text-[11.5rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-green-700 to-green-200 opacity-90 select-none leading-none z-10">
+          FINESPLIT
+        </h2>
+      </section>
+
     </div>
   );
 }
