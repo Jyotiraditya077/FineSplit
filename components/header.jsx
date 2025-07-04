@@ -50,12 +50,15 @@ export default function Header() {
             <Link href="/dashboard">
               <Button
                 variant="outline"
-                className="hidden md:inline-flex items-center gap-2 hover:text-green-600 hover:border-green-600 transition"
+                className="hidden md:inline-flex items-center gap-2 hover:text-green-600 hover:border-green-600 transition cursor-pointer"
               >
                 <LayoutDashboard className="h-4 w-4" />
                 Dashboard
               </Button>
-              <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
+              <Button
+                variant="ghost"
+                className="md:hidden w-10 h-10 p-0 cursor-pointer"
+              >
                 <LayoutDashboard className="h-4 w-4" />
               </Button>
             </Link>
