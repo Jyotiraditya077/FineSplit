@@ -6,13 +6,29 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { FEATURES, STEPS, TESTIMONIALS } from "@/lib/landing";
+import { cn } from "@/lib/utils";
+import { BackgroundLines } from "@/components/ui/background-lines";
+
 
 export default function LandingPage() {
   return (
     <div className="flex flex-col pt-16">
       {/* ───── Hero ───── */}
-      <section className="mt-20 pb-12 space-y-10 md:space-y-15 px-5">
-        <div className="container mx-auto px-4 md:px-6 text-center space-y-6">
+      <section className="relative mt-20 pb-12 space-y-10 md:space-y-15 px-5 flex flex-col items-center justify-center overflow-hidden">
+        {/* Dot background layer */}
+        <div
+          className={cn(
+            "absolute inset-0 z-0",
+            "[background-size:20px_20px]",
+            "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+            "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          )}
+        />
+        {/* Radial mask for soft center glow */}
+        <div className="pointer-events-none absolute inset-0 z-10 bg-white dark:bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+
+        {/* Main Hero Content */}
+        <div className="relative z-20 container mx-auto px-4 md:px-6 text-center space-y-6">
           <Badge variant="outline" className="bg-green-100 text-green-700">
             Welcome to FineSplit
           </Badge>
@@ -47,7 +63,8 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="container mx-auto max-w-5xl overflow-hidden rounded-xl shadow-xl">
+        {/* Hero Preview Image */}
+        <div className="relative z-20 container mx-auto max-w-5xl overflow-hidden rounded-xl shadow-xl">
           <div className="gradient p-1 aspect-[16/9]">
             <Image
               src="/hero.png"
@@ -154,34 +171,37 @@ export default function LandingPage() {
       </section>
 
       {/* ───── Call‑to‑Action ───── */}
-      <section className="py-20 gradient">
-        <div className="container mx-auto px-4 md:px-6 text-center space-y-6">
-          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl text-white">
-            Try FineSplit today
-          </h2>
-          <p className="mx-auto max-w-[600px] text-green-100 md:text-xl/relaxed">
-            Make expense sharing effortless with the tools you deserve.
-          </p>
-          <Button asChild size="lg" className="bg-green-800 hover:opacity-90">
-            <Link href="/dashboard">
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+{/* ───── Call‑to‑Action with animated background ───── */}
+<section className="relative overflow-hidden py-20">
+  <BackgroundLines className="absolute inset-0 z-0" />
+  <div className="relative z-10 container mx-auto px-4 md:px-6 text-center space-y-6">
+    <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl text-green-800">
+      Try FineSplit today
+    </h2>
+    <p className="mx-auto max-w-[600px] text-green-900 md:text-xl/relaxed">
+      Make expense sharing effortless with the tools you deserve.
+    </p>
+    <Button asChild size="lg" className="bg-green-800 hover:opacity-90">
+      <Link href="/dashboard">
+        Get Started
+        <ArrowRight className="ml-2 h-4 w-4" />
+      </Link>
+    </Button>
+  </div>
+</section>
+
 
       {/* ───── Footer ───── */}
       <footer className="border-t bg-gray-50 py-12 text-center text-sm text-muted-foreground">
         © {new Date().getFullYear()} FineSplit. All rights reserved.
       </footer>
+
       {/* ───── FineSplit Clean Footer Branding ───── */}
       <section className="relative bg-gray-50 md:h-50 flex items-center justify-center -mt-10">
         <h2 className="text-[4rem] md:text-[11.5rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-green-700 to-green-200 opacity-90 select-none leading-none z-10">
           FINESPLIT
         </h2>
       </section>
-
     </div>
   );
 }
