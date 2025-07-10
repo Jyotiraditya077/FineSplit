@@ -1,7 +1,7 @@
 # FineSplit
 
 <p align="center">
-  <img src="https://github.com/Jyotiraditya077/FineSplit/blob/master/public/logos/logo.png" alt="FineSplit Logo" width="100px">
+  <img src="https://github.com/Jyotiraditya077/FineSplit/blob/master/public/logos/logo.png" alt="FineSplit Logo" width="170px">
 </p>
 
 **FineSplit** is a smart and intuitive expense splitting app built for friends, flatmates, and teams. It makes tracking who paid what feel effortless — no awkward money convos, just clean records. Powered by **Next.js** and **Convex**, it combines real-time updates, smooth animations, and secure authentication for a modern user experience.
